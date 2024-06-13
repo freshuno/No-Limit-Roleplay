@@ -1,0 +1,619 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #343434;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.nav {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+
+}
+
+.nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 40%;
+    z-index: -4;
+}
+
+.navlista ul li {
+    list-style-type: none;
+    margin-right: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    opacity: 70%;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2px;
+    transition: opacity 0.5s, color 0.5s;
+}
+
+.navlista ul li:hover {
+    opacity: 100%;
+    color: #FF720C;
+}
+
+.navlista ul {
+    display: flex;
+}
+
+.navlista ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.logomale {
+    margin-left: 30px;
+    transition: transform 0.5s;
+}
+
+.logomale:hover {
+    transform: scale(1.3)
+}
+
+
+.miasto {
+    height: 50vh;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.miasto::before {
+    content: "";
+    background-image: url("img/miasto.jpg");
+    opacity: 40%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+
+.motto {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.motto p {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Englebert',
+        sans-serif;
+
+    margin: 0;
+}
+
+.przyciskwhitelist {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.przyciskwhitelist a {
+    background-color: grey;
+    font-size: 40px;
+    color: white;
+    padding: 30px 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 100px;
+    transition: box-shadow 0.5s, transform 0.5s;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Barlow Condensed',
+        sans-serif;
+    letter-spacing: 2px;
+
+}
+
+header {
+    height: 100vh;
+}
+
+.przyciskwhitelist a:hover {
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(226, 93, 1, 0.75);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(226, 93, 1, 0.75);
+    box-shadow: 0px 0px 25px 0px rgba(226, 93, 1, 0.75);
+    transform: scale(1.2);
+}
+
+.przyciskwhitelist a::after {
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    transition: transform 0.5s;
+    z-index: -5;
+
+}
+
+.przyciskwhitelist a:hover::after {
+    content: "";
+    transform: translateY(-100%);
+
+}
+
+article {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+}
+
+article h1 {
+    text-align: center;
+    padding-top: 150px;
+    color: white;
+    font-size: 60px;
+    font-weight: 400;
+    font-family: 'Englebert',
+        sans-serif;
+
+}
+
+.container {
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.teraz {
+    color: #FF720C;
+}
+
+.film {
+    position: relative;
+    overflow: hidden;
+    transition: transform 1s, box-shadow 0.5s;
+    height: 60vh;
+    width: 20vw;
+    border: 3px solid #FF720C;
+}
+
+.film video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    opacity: 40%;
+    transition: opacity 2s;
+}
+
+
+.frakcja {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 1.5s;
+    z-index: 1;
+}
+
+.film:hover video {
+    opacity: 100%;
+}
+
+.film:hover .frakcja {
+    transform: translate(-50%, 240%);
+}
+
+.film:hover {
+    -webkit-box-shadow: 0px 0px 25px 10px rgba(226, 93, 1, 0.75);
+    -moz-box-shadow: 0px 0px 25px 10px rgba(226, 93, 1, 0.75);
+    box-shadow: 0px 0px 25px 10px rgba(226, 93, 1, 0.75);
+    transform: scale(1.1);
+}
+
+.malph {
+    opacity: 60%;
+    transition: opacity 1s;
+}
+
+.film:hover .malph {
+    opacity: 100%;
+}
+
+.city {
+    width: 100%;
+    position: relative;
+    height: 40vh;
+    position: relative;
+}
+
+.city::after {
+    content: "";
+    background-image: url("img/miasto2.jpg");
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -5;
+    opacity: 40%;
+    background-position: center;
+}
+
+.city p {
+
+    position: absolute;
+    margin-top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dolacz {
+    padding: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+article p {
+    font-family: 'Englebert',
+        sans-serif;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.oferowanko {
+    display: flex;
+    bottom: 0;
+    height: 60vh;
+    width: 100%;
+    position: relative;
+}
+
+.oferowanko ul {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    margin-top: 200px;
+    padding: 0px;
+}
+
+.oferowanko ul li {
+    text-align: center;
+    list-style-type: none;
+    font-family: 'Englebert',
+        sans-serif;
+    color: white;
+
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    background-color: black;
+    opacity: 60%;
+    color: white;
+    position: relative;
+}
+
+.jd1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px;
+    margin-top: 0px;
+    font-family: 'Pacifico',
+        cursive;
+}
+
+.jd2 {
+    position: absolute;
+    right: 20px;
+
+    font-size: 20px;
+    margin-top: 15px;
+
+    font-family: 'Pacifico',
+        cursive;
+
+}
+
+.loading {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: grey;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+}
+
+.logono {
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    animation: miganie 2s infinite;
+}
+
+@keyframes miganie {
+    0% {}
+
+    50% {
+        filter: brightness(0);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+
+.znikanie {
+    animation: znikanie 1s forwards;
+}
+
+@keyframes znikanie {
+    0% {}
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media(max-width:1050px) {
+
+
+    .jd1 {
+        transform: translate(-50%, -50%);
+        font-size: 15px;
+        top: 50%;
+    }
+
+    .jd2 {
+        margin: 0;
+        font-size: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+
+
+    }
+
+    .film {
+
+        width: 25vw;
+
+    }
+}
+
+@media(max-width:900px) {
+
+    .frakcja {
+        height: 150px;
+    }
+
+    .film:hover .frakcja {
+        transform: translate(-50%, 550px);
+    }
+
+    .napisowo {
+        height: 150px;
+    }
+
+    .navlista ul li {
+        margin-right: 20px;
+        font-size: 20px;
+
+    }
+}
+
+@media(max-width:800px) {
+    .film {
+        height: 50vh;
+    }
+
+    .dolacz {
+        font-size: 40px;
+        margin-top: 100px;
+    }
+
+    .oferowanko ul li {
+        font-size: 35px;
+    }
+}
+
+@media(max-width:700px) {
+    .oferowanko ul li {
+        font-size: 25px;
+    }
+
+    .oferowanko ul {
+        margin-top: 250px;
+    }
+
+    .navlista ul li {
+        margin-right: 15 px;
+        font-size: 15px;
+
+    }
+
+    .napisowo {
+        height: 100px;
+    }
+
+    .motto p {
+        font-size: 20px;
+    }
+
+    .city p {
+        font-size: 20px;
+    }
+
+
+}
+
+@media(max-width:600px) {
+    .film {
+        height: 40vh;
+    }
+
+    #rekrutacyja h1 {
+        font-size: 40px;
+        padding-top: 200px;
+    }
+
+    .navlista ul li {
+        margin-right: 10 px;
+        font-size: 10px;
+
+    }
+}
+
+@media(max-width:550px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .jd1 {
+        font-size: 10px;
+    }
+
+    .jd2 {
+        font-size: 10px;
+    }
+}
+
+@media(max-width:550px) {
+    .jd1 {
+        font-size: 10px;
+        left: 20px;
+        transform: translate(0%, -50%);
+    }
+
+    .jd2 {
+        font-size: 10px;
+    }
+}
+
+@media(max-width:500px) {
+    .film {
+        width: 60vw;
+        height: 20vh;
+        margin-bottom: 50px;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    article h1 {
+        padding: 0;
+    }
+
+    #rekrutacyja h1 {
+        padding: 0;
+    }
+}
+
+@media(max-width:450px) {
+    .napisowo {
+        height: 80px;
+    }
+
+    .przyciskwhitelist a {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:420px) {
+
+    .dolacz {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:420px) {
+    .oferowanko ul li {
+        font-size: 20px;
+    }
+
+    .przyciskwhitelist a {
+        font-size: 25px;
+    }
+}
+
+.ifrejm {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 150px;
+    position: relative;
+}
+
+.policjafrejm {
+    z-index: -5;
+    opacity: 40%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.przyczepienie {
+    position: fixed;
+
+}
+
+.regulaminek ul li {
+    list-style-type: none;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Englebert',
+        sans-serif;
+    color: white;
+}
+
+.poteznypunkt {
+    font-size: 40px;
+    color: #FF720C;
+}
